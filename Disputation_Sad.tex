@@ -1,0 +1,1277 @@
+\documentclass[10pt,xcolor=dvipsnames]{beamer}
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage[scale=2]{ccicons}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+%\usepackage{graphicx}
+\usepackage{graphicx,color,layout}
+\usepackage[percent]{overpic}
+\usepackage{subfigure}
+\usepackage[]{siunitx}
+\usepackage{chronology}
+\usepackage{xcolor}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\usepackage{subcaption}
+%\usepackage{caption}
+\usepackage{mwe}
+% draw flowchart with TIKZ
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage{natbib}
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\title{Effect of Homogeneity in Engineering}
+\subtitle{Are we engineers or scientists?}
+\date{\today}
+\author{DR. Eng. Mohamad Reza Salehi Sadaghiani}
+\institute{Geotechnical and Hydraulical  Engineering}
+\titlegraphic{\hfill\includegraphics[height=0.7cm]{logoOr}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% navigation symbols
+%\setbeamertemplate{navigation symbols}[default]
+%\setbeamercolor{navigation symbols}{use=structure,fg=structure.fg!80!bg}
+%\setbeamercolor{navigation symbols dimmed}{use=structure,fg=structure.fg!60!bg}
+
+
+\begin{document}
+
+\maketitle
+
+ \begin{frame}{Table of contents}
+   \setbeamertemplate{section in toc}[sections numbered]
+   \tableofcontents[hideallsubsections]
+ \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%% hypertarget and buttons
+% \begin{frame}
+% \hyperlink{label}{\beamerbutton{I jump to fourth slide of next frame}}
+% \end{frame}
+
+% \begin{frame}
+% \begin{itemize}[<+->]
+% \item First.
+% \item Second.
+% \item Third.
+% \item Fourth.\hypertarget<4>{label}{\beamerbutton{I'm on the fourth slide}}
+% \item Fifth.
+% \end{itemize}
+% \end{frame}
+{
+\usenavigationsymbolstemplate{}
+\section{A short history of my professional background}
+}
+
+
+
+{
+\begin{frame}{Professional backgraund}
+\vspace{-0.60cm}
+\begin{itemize}
+	\item Education 1 $\Rightarrow$ B.Sc. Civil Eng. Tehran Azad University
+	\item Education 2 $\Rightarrow$ M.Sc. Structural Eng. KNT University Tehran
+	\item Education 3 $\Rightarrow$ M.Sc. Environmental  Eng. Bauhaus Uni Weimar
+	\item Education 3 $\Rightarrow$ Ph.D. Geotechnical hydraulical Eng. Bauhaus Uni Weimar
+
+\end{itemize}
+\end{frame]
+}
+
+
+
+{
+\usenavigationsymbolstemplate{}
+\section{Relevance of study}
+}
+{
+\usenavigationsymbolstemplate{}
+\begin{frame}{Suffusion in granular materials}
+
+\begin{figure}
+\includegraphics[trim = 0mm 40mm 0mm 40mm,,clip, width=.95\linewidth]{Dike_with_suffusion.png} 
+\vspace{-0.5cm}
+       \caption{schematic view of an embankment dam - due to the core overtopping, the support body of the dam comes to suffusion}
+        \label{fig:dam_suffusion}
+\end{figure}
+\vspace{-0.60cm}
+\begin{itemize}
+	\item Homogeneous arrangement of the soil particles $\Rightarrow$ property improvement \citep{Saucke:1999}
+	\item What did we do ? Thicker layers of soil.
+	\item \alert{\textbf{There is still report of embankment breakages \citep{bonelli2012erosion}}}.
+\end{itemize}
+\end{frame}
+}
+{
+
+\begin{frame}[fragile]{Soil Matrix}
+
+\begin{figure}[H]
+   \centering
+     \includegraphics[width=.99\linewidth]{soil_matrix_new.png}
+        \caption{Different soil matrix classified based on skeletal behavior}
+        \label{fig:soil_matrix}
+\end{figure}
+%\vspace{-0.4cm}
+%{Particle arrangement $\;\longrightarrow\;$  behavior of all materials}
+\end{frame}
+
+\begin{frame}{PSDs from literature}
+
+\begin{figure}
+
+\includegraphics[trim = 0mm 0mm 0mm 0mm,,clip, height=0.8\textheight]{PSD_stable_DFM.png} 
+\vspace{-0.5cm}
+       \caption{PSDs of theoretically analyzed soils - stable soils }
+        \label{fig:stb}
+\end{figure}
+
+\end{frame}
+}
+
+
+
+\begin{frame}{PSDs from literature}
+\begin{figure}
+\includegraphics[trim = 0mm 0mm 0mm 0mm,,clip, height=0.8\textheight]{PSD_transitional_TM.png} 
+\vspace{-0.5cm}
+       \caption{PSDs of theoretically analyzed soils - transitional soils }
+        \label{fig:trnas}
+\end{figure}
+
+\end{frame}
+\begin{frame}{PSDs from literature}
+\begin{figure}
+\includegraphics[trim = 0mm 0mm 0mm 0mm,,clip, height=0.8\textheight]{PSD_unstable_DCM.png} 
+\vspace{-0.5cm}
+       \caption{PSDs of theoretically analyzed soils - unstable soils }
+        \label{fig:unstab}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Comparison of different suffusion criteria}
+
+\begin{table}[b]
+
+{
+\scriptsize
+\begin{center}
+\begin{tabular}{lcccccc}
+PSD & Sherard & Kenny-Lau & Burenkova & Wan-Fell & Sadaghiani-Witt & Witt\\
+& (1979) & (1984, 1985) & (1993) & (2008) & (2012) & (2013)\\\hline
+A1  & \textcolor{red}{U} & \textcolor{red}{U}  & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S}\\
+2R  & \textcolor{red}{U} & \textcolor{red}{U}  & \textcolor{red}{U,M}& \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} \\
+3R  & \textcolor{red}{U} & \textcolor{Aquamarine}{S,M}& \textcolor{Aquamarine}{S}& \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} \\
+4R  & \textcolor{red}{U} & \textcolor{red}{U}  & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} \\
+5** & \textcolor{red}{U} & \textcolor{red}{U}  & \textcolor{red}{U,M}& \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} \\
+6** & \textcolor{red}{U} & \textcolor{red}{U}  & \textcolor{red}{U,M}& \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} \\
+7** & \textcolor{red}{U} & \textcolor{red}{U}  & \textcolor{red}{U}  & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} \\
+RD  & \textcolor{red}{U} & \textcolor{red}{U}  & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} \\
+10  & \textcolor{red}{U} & \textcolor{Aquamarine}{S}& \textcolor{Aquamarine}{U} & \textcolor{red}{U}   & \textcolor{red}{U,M}  & \textcolor{red}{U}\\
+11  & \textcolor{red}{U} & \textcolor{red}{U}   &  \textcolor{Aquamarine}{S}& \textcolor{Aquamarine}{S}&  \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S} \\
+15**& \textcolor{red}{U}  & \textcolor{red}{U}  & \textcolor{red}{U}    & \textcolor{red}{U}   & \textcolor{red}{U,M} & \textcolor{Aquamarine}{S}\\
+9   & \textcolor{red}{U}  & \textcolor{red}{U}  & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S}& \textcolor{red}{U}  & \textcolor{Aquamarine}{S}\\
+13**&  \textcolor{red}{U} & \textcolor{red}{U}  & \textcolor{Aquamarine}{S} & \textcolor{Aquamarine}{S}& \textcolor{red}{U} & \textcolor{red}{U} \\
+14A**&\textcolor{red}{U} & \textcolor{red}{U}   & \textcolor{red}{U}    & \textcolor{red}{U,M} & \textcolor{red}{U} & \textcolor{red}{U} \\
+A2 & \textcolor{red}{U} & \textcolor{red}{U}    & \textcolor{red}{U}    & \textcolor{red}{U}   & \textcolor{red}{U} & \textcolor{red}{U} \\
+A3 & \textcolor{red}{U} & \textcolor{red}{U}    & \textcolor{red}{U}    & \textcolor{red}{U}   & \textcolor{red}{U} & \textcolor{red}{U}\\
+B1 & \textcolor{red}{U} & \textcolor{red}{U}    & \textcolor{Aquamarine}{S} &\textcolor{red}{U}    & \textcolor{red}{U} & \textcolor{red}{U} \\
+B2 & \textcolor{red}{U} & \textcolor{red}{U}    & \textcolor{red}{U}    & \textcolor{red}{U}   & \textcolor{red}{U} & \textcolor{red}{U} \\
+C1 & \textcolor{red}{U} & \textcolor{red}{U}    & \textcolor{red}{U}    & \textcolor{red}{U}   & \textcolor{red}{U} & \textcolor{Aquamarine}{S} \\
+D1 & \textcolor{red}{U} & \textcolor{red}{U}    & \textcolor{Aquamarine}{S} & \textcolor{red}{U}   & \textcolor{red}{U} & \textcolor{Aquamarine}{S}\\\arrayrulecolor{black}\hline
+\end{tabular}
+    \label{tab:Internal_assessment_sad2012}  
+\end{center}
+}%
+\end{table}
+{\small ** the soil has more than 5\% cohesive fine particles}
+\end{frame}
+
+\begin{frame}{Used Particle Size Distribution (PSD)}
+\begin{figure}[H]
+   \centering
+\includegraphics[trim = 0mm 4mm 0mm 17mm, clip, width=.88\linewidth]{PSD_Semar.pdf} F
+    \caption{Used soil for suffusion tests - fluviatal soil from river Rhine (mainly consisted of round spherical particles}
+    \label{fig:suff_test_psd}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]{Suffusion test} \label{suffusion}
+
+\begin{columns}
+\begin{column}{.46\textwidth}
+\begin{figure}
+	\centering
+		\hyperlink{img1_ST_setup}{   \includegraphics[trim = 0mm 3mm 0mm 0mm, clip, width=.98\linewidth]{Fig4_ST_4L.pdf}   }
+	\caption{Setup of suffusion tests}
+	\label{fig:Fig4_ST_4L}
+\end{figure}
+
+\end{column}%
+\begin{column}{.53\textwidth}
+\begin{figure}
+	\centering
+		\hyperlink{img2_Scaterplot}{  \includegraphics[trim = 0mm 3mm 0mm 0mm, clip, width=.98\linewidth]{Scatterplot_ST_EM2.pdf}  }
+		\vspace{-0.4cm}
+	\caption{scatterplot of results }
+	\label{fig:Fig4_ST_4L}
+\end{figure}
+
+\end{column}%
+\end{columns}
+	Requirements for quantification of homogeneity:\\
+	\begin{itemize}
+	\item \textbf{Requirement 1:} Identification of Soil Matrix
+	\item \textbf{Requirement 2:} Determination of Representative Elementary Volume (REV)
+	\end{itemize}
+\end{frame}
+
+%\begin{frame}[fragile]{Relevance of the study}
+%
+%\textsc{\textbf{What is necessary ?}}
+%\alert{Quantification of homogeneity and including its effect on suffusion!}
+%
+%Ultimately, an improved homogeneity assessment method $\Rightarrow$ systematic methodologies for soil placement techniques and tool design to get a higher coefficient of homogeneity 
+%\end{frame}
+
+
+
+%\begin{frame}[fragile]{Research Goals}
+%
+%\tikzstyle{decision} = [diamond, draw, fill=orange!40, 
+%    text width=4em, text badly centered, node distance=3cm, inner sep=0pt]
+%\tikzstyle{block} = [rectangle, draw, fill=orange!40, 
+% text centered, rounded corners, minimum height=4em, text width=3.5cm]
+%\tikzstyle{block1} = [rectangle, draw, fill=olive!40, 
+% text centered, rounded corners, minimum height=4em, text width=3.5cm]
+%\tikzstyle{block2} = [rectangle, draw, fill=blue!40, 
+% text centered, rounded corners, minimum height=4em, text width=2.5cm]
+%\tikzstyle{line} = [draw, -latex']
+%\tikzstyle{cloud1} = [draw, ellipse,fill=orange!40, node distance=4.3cm,
+%    minimum height=2em]
+%    \tikzstyle{cloud2} = [draw, ellipse,fill=olive!40, node distance=4.3cm,
+%    minimum height=2em]
+%{\small                
+%\begin{tikzpicture}[node distance = 2cm, auto]
+%    % Place nodes
+%    \node [block, node distance=2.3cm] (GoalO) {\textbf{Goal 1:}\\ Risk assessment of a widely graded soil against suffusion};
+%    \node [block, below of=GoalO, node distance=2cm] (GoalT) {\textbf{Goal 2:}\\ Soil matrix identification};
+%    \node [block1, below of=GoalT, node distance=2cm] (GoalThree) {\textbf{Goal 3:}\\ Identification of REV};
+%    \node [block1, below of=GoalThree, node distance=2cm] (GoalF) {\textbf{Goal 4:}\\ Homogeneity quantification };
+%    \node [block2, right of=GoalThree, node distance=4.2cm] (GoalFi) {\textbf{Final Goal}\\ Suffusion Criterion };
+%    
+%\node [cloud1, left of=GoalO] (EXP) {\small Experimental};
+%\node [cloud2, left of=GoalThree] (NUM) {\small Numerical};
+%    % Draw edges
+%    \path [line] (GoalO) -- (GoalT);
+%    \path [line] (GoalT) -- (GoalThree);
+%    \path [line] (GoalThree) -- (GoalF);
+%    \path [line] (GoalThree) -- (GoalFi);
+%    \path [line] (GoalO) -| (GoalFi);
+%    \path [line] (GoalT) -| (GoalFi);
+%    \path [line] (GoalF) -| (GoalFi);
+%    \path [line,dashed] (EXP) -- (GoalO);
+%    \path [line,dashed] (EXP) |- (GoalT);
+%    \path [line,dashed] (NUM) -- (GoalThree);
+%    \path [line,dashed] (NUM) |- (GoalF);
+%\end{tikzpicture}
+%}
+%\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Requirement 1 : Identification of Soil Matrix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Place your slide code here
+%
+
+
+\begin{frame}[fragile]{Particle arrangement $\;\longrightarrow\;$  behavior of all materials}
+\begin{figure}[H]
+   \centering
+     \includegraphics[trim = 0mm 3mm 0mm 0mm, clip, width=.99\linewidth]{CM_DCM.png}
+        \caption{Sequential Fill Test (SFT) - soil matrix DCM}
+        \label{fig:EXP-SFT1}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+\usenavigationsymbolstemplate{}
+
+%
+% Place your slide code here
+%
+
+\begin{frame}[fragile]{The real maximum and minimum density}
+%\begin{columns}[T,onlytextwidth]
+%\column{0.66\textwidth}
+\begin{figure}[H]
+\includegraphics[trim = 0mm 78mm 0mm 78mm, clip, width=\textwidth,height=0.82\textheight,keepaspectratio]{Real_Loosest_Densest.pdf} 
+\vspace{-0.2cm}      
+ \caption{Loosest and densest packings in a poly-disperse material}
+        \label{fig:loosedense}
+\end{figure}
+%\column{0.33\textwidth}
+%\end{columns}
+\end{frame}
+
+{
+\usenavigationsymbolstemplate{}
+
+\begin{frame}%{Coefficient of Homogeneity $C_{H}$ - Experimentally}
+	\begin{figure}[H]
+\includegraphics[trim = 0mm 2mm 0mm 2mm, clip, width=\textwidth,height=0.99\textheight,keepaspectratio]{SFT-HOMO_SEG.png}      
+  %\caption{Experimental measurement of Coefficient of Homogeneity $C_{H}$}
+        \label{fig:SFT_Homo_Seg}
+\end{figure}
+\end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+
+{
+\usenavigationsymbolstemplate{}
+%
+% Place your slide code here
+%
+\section{Requirement 2: Determination of REV}
+}
+{
+
+\usenavigationsymbolstemplate{}
+%
+% Place your slide code here
+%
+\begin{frame}{Establishment of the properties of the porous medium}
+\begin{figure}[H]
+\centering
+\includegraphics[trim = 0mm 68mm 0mm 68mm, clip, width=.82\linewidth]{REV5.pdf} 
+\vspace{-0.2cm}
+\caption{Schematic graph of how a measured property varies with
+sample volume and REV( modified after \cite{bear2012hydraulics})}
+\end{figure}
+\end{frame}
+}
+%%%---------------------%%%%%
+
+\begin{frame}{Numerical results for SFT}
+
+
+\begin{figure}[H]
+   \centering
+\includegraphics[trim = 25mm 35mm 25mm 30mm, clip,width=.9\linewidth]{Numerical_SFT.pdf} 
+        \caption{Comparison of simulated absolute height and SFT results with a mass of $ M $ and cylinder diameter of $ 7 \times D_{max}$ for PSD2}
+        \label{fig:Comparison_simulation_Test}
+\end{figure}
+\end{frame}
+
+
+
+{
+\usenavigationsymbolstemplate{}
+\begin{frame}{Parameter study for finding REV for DCM}
+
+%Proof for Prof. Witt for different effect of homogeneity on particle transport.
+{\scriptsize
+\begin{table}[b]
+
+\begin{center}
+\begin{tabular}{lcccccc}
+$D_{cylinder}$             & Experimental Nr.    & Numerical Nr. & Mass\\\hline
+$15\times D_{max}$  & -              & 1           &  $M=13.1\; kg$	\\
+$12\times D_{max}$  & -              & 1           &  $M=10.8\; kg$	\\
+$9\times D_{max}$  & -              & 1           &  $M=8.5\; kg$	\\
+$8\times D_{max}$  & -              & 2           &  $M=6.4\; kg$	\\
+$7\times D_{max}$  & 3              & 5           &  $M=5.0\; kg$ \\
+$7\times D_{max}$  & 3              & 5           &  $M=6.4\; kg$	\\
+$7\times D_{max}$  & 3              & 5           &  $M=3.2\; kg$	\\
+$7\times  D_{max}$  & 3              & 5           & $M=2.56\; kg$\\
+$7\times  D_{max}$  & 3              & 5           &  $M=1.6\; kg$\\
+$7\times  D_{max}$  & 3              & 5           &  $M=1.28\; kg$\\
+$6\times D_{max}$ & -              & 3            &  $M=3.2\; kg$	\\
+$6\times D_{max}$ & -              & 3            &  $M=3.2\; kg$	\\
+$5\times D_{max}$ & -              & 3            &  $M=3.2\; kg$	\\
+$4\times D_{max}$ & -              & 3            &  $M=3.2\; kg$	\\
+$3\times D_{max}$ & -              & 3            &  $M=3.2\; kg$	\\\hline
+ $ \sum $ &  15 & 50 & - \\\hline
+\end{tabular}
+    \label{tab:Values of Volume Flux}  
+    \caption{Parameter study for finding REV}
+\end{center}
+
+\end{table}}%
+\vspace{-0.7cm}
+
+{\scriptsize
+\begin{equation}
+\label{eq:Mass_REV}
+    REV  \: = \left\{\begin{array}{rcl}
+         Mass\;of\; REV \;\; [kg]  & > & 1.01 \times (D_{cylinder}/D_{max}) -1.66\\
+              D_{cylinder}/D_{max} & \geqslant  & 5 \\
+              D_{cylinder,\; min}& \geqslant  & 5.D_{max}  
+\end{array}\right.  %% <--here
+\end{equation}}
+\end{frame}
+}
+
+
+{
+\usenavigationsymbolstemplate{}
+
+\begin{frame}{REV for a widely graded soil}
+\begin{figure}[H]
+   \centering
+\includegraphics[width=.78\linewidth]{REV.pdf} 
+        \caption{Trend line of allowed REV related to maximum particle size $D_{s}$ of investigated PSD}
+        \label{fig:Trendline_REV}
+\end{figure}
+\end{frame}
+}
+{
+\usenavigationsymbolstemplate{}
+
+%
+% Place your slide code here
+%
+\begin{frame}{Packing generation based on MFBA}
+Images show the insertion, the growing , the end of growing, and the relaxation phases respectively.
+\vspace{0.2cm}
+\begin{columns}
+\begin{column}{.49\textwidth}
+\centering
+\hspace{0.2cm} a) \includegraphics[trim = 55mm 185mm 45mm 25mm, clip,width=.75\linewidth]{Packing_Insert_insertPack.pdf}\\
+\hspace{0.2cm} b) \includegraphics[trim = 55mm 185mm 45mm 25mm, clip,width=.75\linewidth]{Packing_Insert_startGrowing.pdf}
+\end{column}%
+\hfill%
+\begin{column}{.49\textwidth}
+\centering
+c) \includegraphics[trim = 55mm 185mm 45mm 25mm, clip,width=.75\linewidth]{Packing_Insert_startGrowing200.pdf}\\
+d) \includegraphics[trim = 55mm 185mm 45mm 25mm, clip,width=.75\linewidth]{Packing_Insert_startGrowing300.pdf}
+\end{column}%
+\end{columns}
+
+\end{frame}
+}
+
+
+{
+\usenavigationsymbolstemplate{}
+
+%
+% Place your slide code here
+%
+\begin{frame}{REV based on MFBA}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.85\linewidth]{REV_MFBA.pdf} 
+     \caption{REV size based on porosity calculations in the Packing}
+        \label{REV_MFBA}
+\end{figure} 
+
+\end{frame}
+}
+
+
+{
+\section{Quantification of homogeneity}
+}
+{
+\begin{frame}{Quantification of Homogeneity}
+
+	\begin{figure}[H]
+\centering
+\begin{tabular}{ p{1.9cm} | p{1.9cm} | p{1.9cm}}
+
+subimage 11 \newline 
+\includegraphics[trim = 22mm 15mm 20mm 10mm, clip, width=.9\linewidth]{PSD1_F13_S20_11.png}
+&
+subimage 12 \newline 
+\includegraphics[trim = 22mm 15mm 20mm 10mm, clip, width=.9\linewidth]{PSD1_F13_S20_12.png} 
+&
+subimage 13 \newline 
+\includegraphics[trim = 22mm 15mm 20mm 10mm, clip, width=.9\linewidth]{PSD1_F13_S20_13.png}\\
+
+\hline 
+subimage 21 \newline 
+\includegraphics[trim = 22mm 15mm 20mm 10mm, clip, width=.9\linewidth]{PSD1_F13_S20_21.png} 
+&
+subimage 22 \newline 
+\includegraphics[trim = 22mm 15mm 20mm 10mm, clip, width=.9\linewidth]{PSD1_F13_S20_22.png} 
+&
+subimage 23 \newline 
+\includegraphics[trim = 22mm 15mm 20mm 10mm, clip, width=.9\linewidth]{PSD1_F13_S20_23.png} \\
+\hline 
+subimage 31 \newline 
+\includegraphics[trim = 22mm 15mm 20mm 10mm, clip, width=.9\linewidth]{PSD1_F13_S20_31.png} 
+&
+subimage 32 \newline 
+\includegraphics[trim = 22mm 15mm 20mm 10mm, clip, width=.9\linewidth]{PSD1_F13_S20_32.png} 
+&
+subimage 33 \newline 
+\includegraphics[trim = 22mm 15mm 20mm 10mm, clip, width=.9\linewidth]{PSD1_F13_S20_33.png} \\
+\hline 
+\end{tabular}
+	\caption{Image segmentation for calculation of $C_{H}$ (subimage number: $3 \times 3$) for PSD2 for packing with skeleton fractions $F1..3$ at $z\;=\;20\;[pixel]$}
+	\label{tab:imagesegmentation}
+\end{figure}
+
+%\begin{equation}
+  %\label{eq100}
+   %\left\{\begin{array}{rcl}
+                    %\sigma &  = & \sqrt[2]{1/N\sum_{n=1}^{N} (x_i-\mu)^2}\; = \; 0\\
+                        %&    &   \\                     
+                    %C_H & = & (1-\sigma^2)100\;\;[\%]\\
+%\end{array}\right.  %% <--here
+%\end{equation}
+
+
+\end{frame}
+}
+
+
+\begin{frame}{Quantification of Homogeneity}
+	
+\begin{figure}[H]
+   \centering
+\includegraphics[width=.74\linewidth]{REV_CH_PSD1_F13_z.pdf} 
+        \caption{Calculation of $C_{H}$ for packing with skeletal fractions $F1..3$ - The calculated COV for subimage size of $24\times24$ pixels equal to \num{8.87} indicates the excellent quality of the sample. The $C_{H}=74.31\%$ represents a stochastically homogeneous sample.}
+        \label{fig:Homogeneity_calc_DEM_Section}
+\end{figure}
+\end{frame}
+
+\section{Packing Model/Homogeneity/Suffusion Criterion}
+
+\begin{frame}{Apollonian Gasket}
+\begin{columns}
+\begin{column}{0.49\textwidth}
+\vspace{0.25cm}
+\begin{figure}
+  \centering
+  \includegraphics[trim=9mm 53mm 7mm 50mm, clip,width=.75\linewidth]{2D_Apollonian_Gasket.pdf}
+	\vspace{0.2cm}
+	\caption{Densest 2D-packings for poly-disperse spheres (Apollonian Gasket)}
+	\end{figure}
+\end{column}%
+\begin{column}{0.49\textwidth}
+\begin{figure}
+  \centering
+\includegraphics[trim=60mm 0mm 50mm 0mm, clip, width=.75\linewidth]{3D_Apollonian_Gasket.pdf}
+\caption{Densest 3D-packings for poly-disperse spheres (Apollonian Gasket)} 
+\end{figure}
+\end{column}
+\end{columns}
+        
+\end{frame}
+
+
+{
+\usenavigationsymbolstemplate{}
+\begin{frame}{New Packing Model}
+	\begin{figure}[H]
+\centering
+\includegraphics[trim = 0mm 35mm 0mm 35mm, clip, height=7.3cm]{Packing_model_Homo_Segregated_SEMAR_FULLER_IDEAL.pdf}
+\vspace{-0.4cm} 
+        \caption{Schematic illustration of packing model for widely graded soils}
+        \label{fig:segregated_packing_model}
+\end{figure}
+\end{frame}
+}
+
+{
+\usenavigationsymbolstemplate{}
+\begin{frame}{Packing model for any widely graded soil}
+\begin{figure}
+	\centering
+		\includegraphics[trim=0mm 100mm 0mm 100mm, clip, width=.99\linewidth]{IHP.pdf}
+	\caption{Concept of Ideal Homogeneous Packing}
+	\label{fig:IHP}
+\end{figure}
+	
+\end{frame}
+}
+
+{
+\usenavigationsymbolstemplate{}
+\begin{frame}{Packing model for any widely graded soil}
+\begin{figure}
+	\centering
+		\includegraphics[trim=0mm 95mm 0mm 95mm, clip, width=.95\linewidth]{IHP_melt2.pdf}
+	\caption{Concept of Ideal Homogeneous Packing}
+	\label{fig:IHP}
+\end{figure}
+	
+\end{frame}
+}
+
+%%%HERE
+\begin{frame}{Suffusion criterion}
+
+\begin{figure}[H]
+   \centering
+\includegraphics[trim= 0mm 50mm 0mm 50mm,clip,width=.8\linewidth]{Suffusion_Criteria_SAD.pdf} 
+\vspace{-0.3cm}
+        \caption{Suffusion criterion}
+        \label{fig:reserved_area_PSD1}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Example calculation using proposed suffusion criterion (PSD1)}
+Fraction F1, F6, F7 and F8 has to fill the rest of reserved areas $\Rightarrow$ they come to contact to each other
+
+$\Rightarrow \; D_{F1}/D_{F6}=20/0.75= 26.66 > 6.46\:  \Rightarrow\:$ not filter stable 
+
+
+
+
+\begin{columns}
+\begin{column}{0.68\textwidth}
+{\scriptsize
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\toprule
+F & $D_{F}$  & $ 3 \times D_{F}$ & RA & RA & PDF & $\Delta R_{A}$ \\\hline
+[-] & [$mm$] &  [$mm$] &  [$mm^{2}$] & [\%] & [\%] & [\%]\\\hline
+F1 & 20  & 60  & 6000 & 42.7 & 52.4& +9.70 \\
+\textcolor{red}{F2} & 16  & 48  & 4800 & 34.2 & 21.4& \textcolor{red}{-12.8} \\
+\textcolor{red}{F3} & 5   & 15  & 1500 & 10.7 & 5.10& \textcolor{red}{-5.60} \\
+\textcolor{red}{F4} & 3   & 9   & 900  & 6.40 & 4.00& \textcolor{red}{-2.40} \\
+\textcolor{red}{F5} & 1.3 & 3.9 & 390  & 2.80 & 2.00& \textcolor{red}{-0.80} \\
+F6 & 0.75& 2.25& 225  & 1.60 & 2.00& +0.40  \\
+F7 & 0.5 & 1.50& 150  & 1.10 & 7.10& +6.00  \\
+F8 & 0.25& 0.75& 75   & 0.50 & 6.00& +5.50  \\\hline
+   & & $\Sigma$ & 14040   & 100  & 100 & 0.0 \\
+   \bottomrule
+\end{tabular}
+}
+\end{column}
+\begin{column}{0.31\textwidth}
+\includegraphics[height = 5.4 cm]{Calc_PSD1_Semar2.pdf} 
+\label{fig:areas_PSD1}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+{
+\usenavigationsymbolstemplate{}
+\begin{frame}{Suffusion criterion}
+\begin{figure}[H]
+   \centering
+\includegraphics[width=.78\linewidth]{Suff_criterion_SAD_not_log_PSD1.pdf} 
+        \caption{Calculation of difference between ideal homogeneous internally stable packing with packing generated for PSD1}
+        \label{fig:reserved_area_PSD1}
+\end{figure}
+
+	
+\end{frame}
+}
+{
+\usenavigationsymbolstemplate{}
+\begin{frame}{Suffusion criterion}
+\begin{figure}[H]
+   \centering
+\includegraphics[width=.78\linewidth]{Hennes_Winkler_SFT.pdf} 
+\vspace{-0.2cm}
+        \caption{Significance of the proposed suffusion criterion - PSD1 with different amount of fill}
+        \label{fig:reserved_area_PSD1}
+\end{figure}
+
+	
+\end{frame}
+}
+
+{
+\usenavigationsymbolstemplate{}
+\begin{frame}{Significance of Suffusion criterion}
+\begin{figure}[H]
+   \centering
+\includegraphics[width=.8\linewidth]{KritMo_CH.png} 
+\vspace{-0.3cm}
+        \caption{proposed suffusion criterion - PSD1 with different amount of fill}
+        \label{fig:Krit_MO}
+\end{figure}
+
+	
+\end{frame}
+}
+
+
+\begin{frame}{Effect of homogeneity measurement in Field}
+When is the measured $C_{H}$ dangerous?
+\begin{figure}[H]
+   \centering
+\includegraphics[trim= 0mm 94mm 0mm 94mm,clip,width=.95\linewidth]{Effect_CH-Field_situation.pdf} 
+\vspace{-0.3cm}
+        \caption{Measured $C_{H}$ and its relationship to local and global particle transport }
+        \label{fig:CH-field}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{The main results}
+\begin{enumerate}
+	\item \textbf{Quantification of Homogeneity $C_{H}$} for numerical models as well as for laboratory and field situation using \textbf{image analysis} and \textbf{experimentally}
+	\item \textbf{Very simple suffusion criterion} based on fraction diameters and its masses $$ f(D_{i}/\sum(D_{i}),M)$$
+	\begin{itemize}
+		\item which considers Homogeneity
+		\item which identifies the dominant matrix
+	\end{itemize} 
+	\item \textbf{packing model based on loosest state} of the soil for reproducibility of experimental procedure
+\end{enumerate}
+\end{frame}
+
+
+
+
+
+
+
+{\Large
+\plain{Questions?}
+}
+\begin{frame}[allowframebreaks]{References}
+
+  \bibliography{Phd}
+  %\bibliographystyle{abbrv}
+  \bibliographystyle{agsm}
+
+\end{frame}
+
+\begin{frame}{equation of motion}
+
+For each sphere, the equation of motion is written, and the resulting two equations can be combined to obtain the governing differential equation for the penetration x, 
+\begin{align}
+\ddot{x}+(D/m_{r})\dot{x}+(K/m_{r})x=0
+\label{equ:motion}
+\end{align}
+
+where 
+$
+m_{r}=\dfrac{m_{1}m_{2}}{m_{1}+m_{2}}
+$
+is the reduced mass. Equation of motion is solved for the penetration $x$ in the usual fashion to yield,
+
+\begin{align}
+x(t)   \: = \: C_{1}e^{-\mu t}\cos(\Omega t) + C_{2}e^{-\mu t}\sin(\Omega t)\\
+\Omega \: = \: \sqrt{\omega_{0}^{2} - \mu^{2}}\\
+\omega_{0}^{2} \: = \: K/m_{r} , \mu\: = \:D/2m_{r}
+\end{align}
+
+the natural frequency is $f\: = \:\Omega / 2\pi$ Thus, the collision time tc can be approximated as $t_{c} \: = \: 1/2f \: = \:\pi / \sqrt{\omega_{0}^{2} - \mu^{2}}$
+
+\end{frame}
+\begin{frame}{Proof for suffusion tests }
+
+%Proof for Prof. Witt for different effect of homogeneity on particle transport.
+
+\begin{table}[b]
+
+{
+\scriptsize
+\begin{center}
+\begin{tabular}{lcccccc}
+Hydraulic     & SRT $q*10^{-3}$ & ALS $q*10^{-3}$  & DLS $q*10^{-3}$ \\
+Gradient (i)  & [$m.s^{-1}$]    & [$m.s^{-1}$]    & [$m.s^{-1}$] \\\hline
+0.03          & $5.5\pm 0.02 $  & $5.18\pm 0.01$  & $4.6\pm 0.02$ \\
+0.05          & $18\pm 0.02 $  & $17.3\pm 0.01$   & $15.12\pm 0.02$ \\
+0.08          & $22\pm 0.02 $  & $21.43\pm 0.02$  & $19.66\pm 0.04$ \\
+0.1          &  $26\pm 0.06 $  & $25.55\pm 0.04$  & $24.32\pm 0.06$ \\\hline
+\end{tabular}
+    \label{tab:Values of Volume Flux}  
+    \caption{Values of volume Flux for different samples at different hydraulic gradient - }
+\end{center}
+}%
+\end{table}
+
+Among the three samples, the mixed SRT
+has the highest permeability. This indicates that fluid flow faster in mixed sample
+than layered segregated media.
+\end{frame}
+
+
+{
+\usenavigationsymbolstemplate{}
+
+%
+% Place your slide code here
+%
+\begin{frame}[fragile]{Relevance of the study} 
+
+In-situ particle distributions are highly dependent on placement parameters during construction 
+\begin{itemize}
+\item moisture content of the soil
+\item drop height\item geometry
+\item particle coarseness
+\item relation between particle diameters
+\item dynamical vibrations
+\end{itemize}
+After \cite{KenneyWestland:1993} the poorly graded soils are also very vulnerable to segregation\\
+
+\alert{\textbf{Is the assumption of soil homogeneity a suitable assumption????????} }
+\end{frame}
+}
+
+\begin{frame}[fragile]{Relevance of the study}
+\begin{figure}[h]
+	\centering
+		\includegraphics[trim = 1mm 13mm 4mm 6mm, clip, width=.80\linewidth]{Kenney_westland_1993.png}
+		       \caption{Initial and segregated PSDs;  
+        curve 1 initial PSD;
+        curve 2 and 2' relatively segregated;
+        curve 3 and 3' perfect segregated after \citep{KenneyWestland:1993}}
+        \label{kenwestseg93}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}%{Energy dissipation in the sample}
+\begin{figure}[H] 
+   \centering
+\includegraphics[trim = 10mm 6mm 10mm 6mm, clip,width=.96\linewidth]{Schematic_suffusion_test_dwg-Model.pdf} 
+        \caption{Schematic illustration of total head surface for suffusion tests}
+        \label{fig:suffusion_test_total_head_loss}
+\end{figure}
+
+\end{frame}
+
+
+{
+\usenavigationsymbolstemplate{}
+
+%
+% Place your slide code here
+%
+\begin{frame}[fragile]{Particle arrangement $\;\longrightarrow\;$  behavior of all materials}
+\begin{figure}[H]
+
+   \centering
+     \includegraphics[trim = 0mm 3mm 0mm 0mm, clip,width=.91\linewidth]{DCM_TM.png}
+        \caption{Sequential Fill Test (SFT) - soil matrix DCM-TM}
+        \label{fig:EXP-SFT2}
+\end{figure}
+
+\end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+\usenavigationsymbolstemplate{}
+
+%
+% Place your slide code here
+%
+\begin{frame}[fragile]{Particle arrangement $\;\longrightarrow\;$  behavior of all materials}
+\begin{figure}[H]
+
+   \centering
+     \includegraphics[trim = 0mm 3mm 0mm 0mm, clip, width=.91\linewidth]{TM_DFM.png}
+        \caption{Sequential Fill Test (SFT) soil matrix TM-DFM}
+        \label{fig:EXP-SFT3}
+\end{figure}
+
+\end{frame}
+
+\begin{frame} {Linear Spring-Dashpot Model for Two Interacting Spheres}
+\begin{columns}[T,onlytextwidth]
+\column{0.62\textwidth} 
+\vspace{0.32cm}
+Consider a sphere of mass $m_{1}$ and diameter $d_{1}$ whose collisional interaction with another sphere (mass $m_{2}$, diameter $d_{2}$) is idealized by a dashpot and spring as depicted in Fig. \ref{fig:dp} Define the penetration distance $x$ as:
+\begin{align}
+x\:=(x_{1}-d_{1}/2)-(x_{2}-d_{2}/2)=\\
+x\:=x_{1}-x_{2}+1/2(d_{1}+d_{2})
+\end{align}
+Hence the interpenetration velocity and acceleration is given by
+\begin{align}
+\dot{x}\:=\dot{x_{1}}-\dot{x_{2}}\\
+\ddot{x}\:=\ddot{x_{1}}-\ddot{x_{2}}
+\end{align}
+
+
+\column{0.32\textwidth}
+\begin{figure}[t]
+\centering
+\includegraphics[width=7cm, height=4.8cm, keepaspectratio]{Dashpot-spring-model_normal-forces.png}
+\caption{Sphere interaction modeled as a spring and dashpot \cite{goniva2010open}}
+\label{fig:dp}
+\end{figure}
+
+\end{columns}
+\end{frame}
+}
+
+
+{
+\usenavigationsymbolstemplate{}
+
+\begin{frame}{Quantification of Homogeneity}
+\begin{figure}[H]
+\centering
+\begin{tabular}{ p{2.3cm} | p{2.3cm} | p{2.3cm}}
+subimage 11 \newline 
+\includegraphics[trim = 70mm 120mm 70mm 105mm, clip, width=0.70\linewidth]{Slice_Mid_3x3/11.pdf}
+&
+subimage 12 \newline 
+\includegraphics[trim = 70mm 120mm 70mm 105mm, clip, width=0.70\linewidth]{Slice_Mid_3x3/21.pdf} 
+&
+subimage 13 \newline 
+\includegraphics[trim = 70mm 120mm 70mm 105mm, clip, width=0.70\linewidth]{Slice_Mid_3x3/31.pdf} \\\hline 
+subimage 21 \newline 
+\includegraphics[trim = 70mm 120mm 70mm 105mm, clip, width=0.70\linewidth]{Slice_Mid_3x3/12.pdf}
+&
+subimage 22 \newline 
+\includegraphics[trim = 70mm 120mm 70mm 105mm, clip, width=0.70\linewidth]{Slice_Mid_3x3/22.pdf} 
+&
+subimage 23 \newline 
+\includegraphics[trim = 70mm 120mm 70mm 105mm, clip, width=0.70\linewidth]{Slice_Mid_3x3/32.pdf}  \\\hline 
+subimage 31 \newline 
+\includegraphics[trim = 70mm 120mm 70mm 105mm, clip, width=0.70\linewidth]{Slice_Mid_3x3/13.pdf} 
+&
+subimage 32 \newline 
+\includegraphics[trim = 70mm 120mm 70mm 105mm, clip, width=0.70\linewidth]{Slice_Mid_3x3/23.pdf} 
+&
+subimage 33 \newline 
+\includegraphics[trim = 70mm 120mm 70mm 105mm, clip, width=0.70\linewidth]{Slice_Mid_3x3/33.pdf} \\\hline 
+\end{tabular}
+	\caption{Image segmentation for calculation of $C_{H}$ of pores (sub-image number: $3 \times 3$) for lattice packing at $z\;=\;10\;pixel$ }
+	\label{tab:imagesegmentationLattice}
+\end{figure}
+\end{frame}
+}
+
+
+\begin{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+{
+\tiny
+\begin{tabular}{L{3.1cm}  L{2.7cm}  L{4.5cm}}
+\textbf{ Parameter matrix} & \textbf{Normalized matrix }& \textbf{Vector of parameter and its mean value}\\
+ \hline \hline
+\[PND=
+\begin{vmatrix}
+4.00 & 3.00 & 3.00 \\
+3.00 & 5.00 & 4.00 \\
+4.00 & 2.00 & 2.00 \\
+\end{vmatrix}\Rightarrow
+\]
+& 
+\[\hat{PND} =
+\begin{vmatrix}
+0.80 & 0.60 & 0.60 \\
+0.60 & 1.00 & 1.00 \\
+0.80 & 0.40 & 0.40\\
+\end{vmatrix}\Rightarrow
+\]
+&
+% 0.1 & 0.2 & 0.31 & 0.4&0.5& 0.10& 0.12 & 0.32 & 0.2 \\
+
+\[ X_{1}=
+\begin{vmatrix}
+0.80 & 0.60 & 0.80 & 0.60 & 1.00 \\& 0.40 & 0.60 & 1.00 & 0.40
+\end{vmatrix}
+\]
+\[\Rightarrow \mu_{X_{1}}\;=\; 0.69\]\\
+% 2nd Row
+\[n=
+\begin{vmatrix}
+0.45 & 0.43 & 0.62 \\
+0.31 & 0.42 & 0.26 \\
+0.40 & 0.39 & 0.28 \\
+\end{vmatrix}\Rightarrow
+\]
+& 
+\[\hat{n} =
+\begin{vmatrix}
+0.73 & 0.69 & 1.00 \\
+0.51 & 0.68 & 0.42 \\
+0.65 & 0.63 & 0.46 \\
+\end{vmatrix}\Rightarrow
+\]
+& 
+% 0.1 & 0.2 & 0.31 & 0.4&0.5& 0.10& 0.12 & 0.32 & 0.2 \\
+
+\[ X_{2}=
+\begin{vmatrix}
+0.73 & 0.69 & 1.00 & 0.51 & 0.68 \\& 0.42 & 0.65 & 0.63 & 0.46 
+\end{vmatrix}
+\]\[\Rightarrow \mu_{X_{2}}\;=\; 0.64\]\\
+%third row
+\[D_{e}=
+\begin{vmatrix}
+10.29 & 14.92 & 15.89 \\
+14.68 & 9.21  & 11.37 \\
+9.24  & 19.65 & 18.96 \\
+\end{vmatrix}\Rightarrow
+\]
+& 
+\[\hat{D_{e}} =
+\begin{vmatrix}
+0.52 & 0.76 & 0.80 \\
+0.75 & 0.47 & 0.58 \\
+0.47 & 1.00 & 0.97 \\
+\end{vmatrix}\Rightarrow
+\]
+&
+\[ X_{3}=
+\begin{vmatrix}
+0.52 & 0.76 & 0.80 & 0.75 & 0.47 \\& 0.58 & 0.47 & 1.00 & 0.97 
+\end{vmatrix}
+\]\[\Rightarrow \mu_{X_{3}}\;=\; 0.70\]\\ \hline 
+% 4th row
+\[
+COV(X_{1},X_{3})\:=\: \sum_{ i=1}^{N=3}(x_{i}-\mu_{X_{i}})(x_{i+1}-\mu_{X_{i+1}})/N \; \Rightarrow
+\]
+\[
+\sum(COV(X_{1},X_{3})= 0.309 \; \Longrightarrow  C_{H} = (1-sum(COV(X_{1},X_{3})) \times 100\;  \Longrightarrow \; C_{H} \:=\: 74.31 \% 
+\]
+&
+
+&
+\[COV(X_{1},X_{3})\:=\:
+\begin{vmatrix}
+0.051 &	0.022	& 0.042\\
+0.022 &	0.030	& 0.028\\
+0.042 &	0.028	& 0.041\\
+\end{vmatrix}\Downarrow
+\]\\
+\\ \hline
+
+\end{tabular}
+	\caption{Calculation method of C_{H}}
+	\label{ch:CH_calc_diag}
+	}
+\end{table}
+%%%%%%%%%%%%%%%
+\end{frame}
+
+
+
+\begin{frame}
+
+\begin{figure}[H]
+   \centering
+\includegraphics[width=.92\linewidth]{REV_CH_lattice.pdf} 
+        \caption{$C_{H}$ calculations for almost perfect homogeneous sample (see Figure \ref{tab:imagesegmentationLattice}}
+        \label{fig:Homogeneity_calc_lattice_Section}
+\end{figure}
+
+\end{frame}
+
+\section*{Suffusion tests}
+
+
+{
+\usenavigationsymbolstemplate{}
+\begin{frame}{Suffusion tests (ST)}
+\begin{figure}[H]
+
+   \centering
+\includegraphics[trim = 2mm 85mm 2mm 85mm, clip, width=.95\linewidth]{suffusion_test_apparatus.pdf} 
+        \caption{Principle sketch of the suffusion test procedure }
+        \label{fig:suff_test_device}
+\end{figure}
+\end{frame}
+}
+
+
+%\metroset{titleformat frame=smallcaps}
+
+\begin{frame}{Result of Suffusion Tests (ST)}
+
+
+\begin{figure}
+	\centering
+		\includegraphics[trim= 0mm 5mm 0mm 15mm, clip, width=0.92\textwidth]{Scatterplot_ST_EM2.pdf}
+		\vspace{-0.1cm}
+	\caption{High variation of the eroded mass in different suffusion tests}
+	\label{fig:scatterplot_ST_EM}
+\end{figure}
+
+
+\end{frame}
+
+
+\begin{frame}
+\begin{figure} [H]
+   \centering
+\includegraphics[trim = 4mm 5mm 4mm 5mm, clip,width=.98\linewidth]{Non-homogeneous_time-differ_i.pdf} \caption{Contours of total head for specimen A - non-homogeneous}       
+\end{figure}
+\end{frame}
+
+{
+\usenavigationsymbolstemplate{}
+
+%
+% Place your slide code here
+%
+\begin{frame}
+\begin{figure}
+   \centering
+\includegraphics[trim = 4mm 5mm 5mm 4mm, clip,width=.98
+\linewidth]{homogeneous_time-differ_i.pdf} 
+\caption{Contours of total head for specimen B - stochastically homogeneous}
+\end{figure}
+\end{frame}
+}
+
+\begin{frame}
+		  \begin{center}\begin{chronology}[2]{2008}{2015}{0.85\textwidth}
+\event[\decimaldate{1}{2}{2008}]{\decimaldate{22}{1}{2014}}{132 different tests }
+\event[\decimaldate{1}{2}{2008}]{\decimaldate{22}{1}{2011}}{52 Suffusion tests}
+\event[\decimaldate{27}{4}{2014}]{\decimaldate{30}{8}{2014}}{\alert{Suffusion Criterion}}
+\end{chronology}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\label{{img2_Scaterplot}}
+\begin{figure}
+	\centering
+		\hyperlink{suffusion}{  \includegraphics[trim = 0mm 3mm 0mm 0mm, clip, width=.98\linewidth]{Scatterplot_ST_EM2.pdf}}
+	\caption{Scatter plot eroded masses }
+	\label{fig:Fig4_ST_4L}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}\label{img1_ST_setup}
+	\begin{figure}
+	\centering
+		\hyperlink{suffusion}{   \includegraphics[trim = 0mm 3mm 0mm 0mm, clip, width=.98\linewidth]{Fig4_ST_4L.pdf}   }
+\end{figure}
+\end{frame}
+
+\begin{frame}{Input parameter for DEM modeling}
+\begin{table}[H]
+{\scriptsize
+\begin{center}
+\begin{tabular}{lccc}
+Parameter & Symbol & Units & Value\\\hline
+Particle density & $\rho$ & $kg/m^{3}$ & 2500 \& 2650\\
+Young's Modulus & $E$ & $GPa$ & 50\\
+Coefficient of Restitution & $\varsigma$ & - & 0.3\\
+Coefficient of inter-particle friction & $\mu$ & - & 0.1\\
+Poison ratio & $\nu$ & - & 0.3\\
+Length of timestep & $\Delta\:t$ & sec. & $10^{-7}$\\\hline
+\end{tabular}
+     \caption{DEM model parameters for numerical simulations.}
+    \label{tab:DEM_model_parameter}  
+\end{center}
+}%
+\end{table} 
+
+{\scriptsize
+\begin{table}[H] 
+\centering
+\begin{tabular}{lcccccc}
+Fraction & F1 & F2 & F3 & F4 & F5 & F6  \\\hline
+$D/Dmax$ PSD2 [-] & $1$ & $0.8$ & $0.315$ & $0.2$ & $0.1$ & $0.05$ \\
+$D/Dmax$ PSD3 [-] & $1$ & $0.8$ & $0.25$ & $0.15$ & $0.065$ & $0.0375$ \\\hline 
+\end{tabular}
+\caption{Different fractions of the normalized PSDs for numerical simulations } 
+\label{Tab_diff_fraction_norm_PSD}
+\end{table}
+}
+
+\end{frame}
+
+
+
+
+\begin{frame}{investigated PSDs for numerical modeling}
+\begin{figure}[H]
+   \centering
+\includegraphics[trim = 0mm 3mm 0mm 17mm, clip, width=.9\linewidth]{PSD2_PSD3_Semar.pdf} 
+        \caption{Normalized PSD used in DEM simulations}.
+        \label{fig:PSD1PSD2_norm_Simu}
+\end{figure}
+\end{frame}
+
+
+{
+\usenavigationsymbolstemplate{}
+%
+% Place your slide code here
+%
+
+
+
+
+\begin{frame}{Experimental results for SFT}
+\begin{figure}[H]
+   \centering
+\includegraphics[trim = 0mm 4mm 0mm 5mm, clip, width=.8\linewidth]{SFT_PSD2_PSD3.pdf} 
+        \caption{SFT result for PSD2 and PSD3, $ h_{r}: $ relative height $n:$ porosity}
+        \label{fig:SFT_result_PSD2_PSD3}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Experimental quantification of Homogeneity}
+
+\begin{figure}[H]
+   \centering
+\includegraphics[width=.8\linewidth]{CH_EXPerimental.png} 
+\vspace{-0.3cm}
+        \caption{Experimental coefficient of homoegeneity $C_{H}$}
+        \label{fig:reserved_area_PSD1}
+\end{figure}
+
+\begin{figure}[H]
+   \centering
+\includegraphics[width=.45\linewidth]{H_Field.png} 
+\vspace{-0.3cm}
+        \caption{Equivalent height of the sample taken from field}
+        \label{fig:reserved_area_PSD1}
+\end{figure}
+\end{frame}
+{
+\usenavigationsymbolstemplate{}
+\begin{frame}{Summary}
+\begin{figure}[H]
+   \centering
+\includegraphics[ width=\textwidth]{findings1.png} 
+
+\end{figure}
+\break
+
+	
+\end{frame}
+}
+
+{
+\usenavigationsymbolstemplate{}
+\begin{frame}{Summary}
+\begin{figure}[H]
+   \centering
+\includegraphics[ width=\textwidth]{findings2.png} 
+
+\end{figure}
+\break
+
+	
+\end{frame}
+}
+
+\end{document}
